@@ -1,0 +1,79 @@
+.container{
+    width: 100%;
+    height: 65%;
+    border: 2px solid yellow;
+    position: relative;
+}
+.obstacles img{
+    width: inherit;
+}
+.obstacles{
+    width: 100px;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+}
+.block1{
+    left: 500px;
+}
+.block2{
+    left: 900px;
+}
+.mainplayer{
+    left: 100px;
+    transition: all 0.35s linear;
+}
+.jump{
+    bottom: 290px;
+}
+
+
+.obstacklecontainer {
+    position: absolute;
+    bottom: 0;
+    z-index: 5;
+}
+.right{
+    animation: move 3s linear infinite;
+}
+.pause{
+    animation-play-state:paused;
+}
+/* .right2{
+    animation: move 3s linear 1s infinite;
+} */
+
+@keyframes move {
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -5vw;
+    }
+}
+
+/* container 2 */
+.container2 {
+    height: 30%;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    font-size: 3pc;
+    transition: all 2s ease;
+}
+.restart {
+    font-size: 1.5pc;
+    background: black;
+    border: 2px solid;
+    padding: 4px 18px;
+    border-radius: 60px;
+    cursor: pointer;
+    visibility: hidden;
+}
+.restart:hover{
+    background-color:rgba(121, 204, 207, 0.315);
+}

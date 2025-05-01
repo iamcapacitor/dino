@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="script.js"></script> -->
+    <title>Dino Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: rgb(121, 204, 207);
+        }
+
+        .maincontainer {
+            background-color: black;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="maincontainer">
+        <div class="container">
+            <div class="obstacklecontainer">
+                <div class="block1 obstacles right">
+                    <img src="images/obstacle.webp" alt="obstacles">
+                </div>
+            </div>
+            <div class="mainplayer obstacles ">
+                <img class="playerimg" src="images/playerrun.gif" alt="mainplayer">
+            </div>
+        </div>
+        <div class="container2">
+            <div class="mainbtn"><button onclick="refreshpage()" class="restart">Restart</button></div>
+            <div class="gamedone"></div>
+            <div class="score">Score is : <span class="mainscore"></span></div>
+        </div>
+    </div>
+
+</body>
+<script>
+    let block1 = Array.from(document.getElementsByClassName('block1'));
+    let numbers = () => {
+        let a = Math.round(20 + 200 * Math.random())
+        console.log(a)
+        return a;
+    };
+
+
+</script>
+<script src="script.js"></script>
+</html>
