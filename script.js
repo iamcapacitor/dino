@@ -18,7 +18,7 @@ document.onkeydown = function(e){
         dino.classList.add('jump');
         setTimeout(()=>{
             dino.classList.remove('jump');
-        },400);
+        },450);
     }else if(keycode == ' '){
         document.querySelector('.right').classList.toggle('pause');
         if(cross){
@@ -31,6 +31,7 @@ document.onkeydown = function(e){
 };
 
 // to check for collision
+let dino , obstacles , dx , dy , ox , oy , offsetx , offsety;
 setInterval(()=>{
     dino = document.querySelector('.mainplayer');
     obstacles = document.querySelector('.obstacles');
@@ -40,7 +41,7 @@ setInterval(()=>{
     oy = parseInt(window.getComputedStyle(obstacles, null).getPropertyValue('bottom'));
     offsetx = ox-dx;
     offsety = dy-oy;
-},10);
+},1);
 
 // function to update score by 1 digits
 
@@ -69,9 +70,9 @@ if((offsetx >= -100) && (offsetx <= 120) && (offsety <=100) ){
     mainscore.innerHTML = ++score; 
     // to increase speed of game
     let  right = document.querySelector('.right');
-     right.style.animationDuration = `${--duration}ms`
+     right.style.animationDuration = `${Math.max( duration -20 , 800)}ms`
 }
-},100);
+},50);
 
 
 
